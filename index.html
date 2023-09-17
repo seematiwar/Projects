@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Light Box</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="Container" id="gallery">
+        <div class="GalleryOverlay"></div>
+        <div class="imgbox">
+            <!-- <span>&times</span> -->
+            <img src="" alt="">
+        </div>
+        <div class="GallItems"><img src="https://cdn.buildofy.com/projects/19c33f9d-4aa2-4b63-abd3-7f488f02faa7.jpeg" alt="HomeImage"> 
+        <img src="https://images.unsplash.com/photo-1492889971304-ac16ab4a4a5a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fGJlYXV0aWZ1bCUyMGhvdXNlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"" alt="Second Img">
+        <img src="https://thumbs.dreamstime.com/z/beautiful-exterior-home-pictures-new-home-design-images-modern-best-house-design-images-best-house-images-images-latest-172194515.jpg" alt="Third Img">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8N3x8fGVufDB8fHx8fA%3D%3D&w=1000&q=80" alt="Fourth Img">  
+        <img src="https://plus.unsplash.com/premium_photo-1682377521715-95d16dc51943?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" alt="Fifth img">
+       <img src="https://images.unsplash.com/photo-1565297032488-90722f09db62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="6th img"></div>
+
+    </div>
+ 
+</body>
+
+<script>
+    let overlay=document.querySelector(".GalleryOverlay");
+    let imageBox=document.querySelector(".imgbox");
+    var img=document.querySelector(".imgbox img")
+    let gallery=document.querySelector("#gallery")
+    gallery.addEvenntListener("click",(event)=>{
+        let currentImagePath=event.target.src;
+        overlay.classList.add('GalleryOverlayshow')
+        imgbox.classList.add('imgboxshow')
+        img.src=currentImagePath;
+        console.log(currentImagePath);
+    })
+</script>
+</html>
